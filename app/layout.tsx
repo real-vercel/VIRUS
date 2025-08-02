@@ -1,6 +1,5 @@
 import '#/styles/globals.css';
 
-import db from '#/lib/db';
 import { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 
@@ -30,7 +29,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const demos = db.demo.findMany();
+  
   return (
     <html lang="en" className="[color-scheme:dark]">
       <body
@@ -51,4 +50,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 
